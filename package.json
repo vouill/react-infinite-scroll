@@ -1,17 +1,27 @@
 {
-  "name": "react-infinite-scroll",
-  "private": true,
-  "version": "0.0.0",
+  "name": "@vouill/react-infinite-scroll",
+  "version": "0.0.1",
   "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
+    "build:library": "tsup",
     "lint:check": "eslint .",
     "lint:fix": "eslint . --fix",
     "prettier:check": "prettier . --check",
     "prettier:fix": "prettier . --write",
     "preview": "vite preview"
   },
+  "files": [
+    "index.js",
+    "index.js.map",
+    "index.cjs",
+    "index.cjs.map",
+    "index.d.cts",
+    "index.d.ts",
+    "package.json",
+    "README.md"
+  ],
   "peerDependencies": {
     "react": "^17.0.0 || ^18.0.0 || ^19.0.0",
     "react-dom": "^17.0.0 || ^18.0.0 || ^19.0.0"
