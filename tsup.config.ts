@@ -7,5 +7,6 @@ export default defineConfig({
   format: ["esm", "cjs"],
   splitting: false,
   sourcemap: true,
+  dts: true,
   outDir: "./",
 })

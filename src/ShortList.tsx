@@ -1,9 +1,9 @@
 import { useState } from "react"
 import { LoadMore } from "../lib/LoadMore"
-import { getAsyncFakeData } from "./fakeData"
+import { getSyncFakeData } from "./fakeData"
 
-export const Async = () => {
-  const [data, setData] = useState<string[]>([])
+export function ShortList() {
+  const [data, setData] = useState(getSyncFakeData(2))
   return (
     <div className="App">
       <div>
@@ -13,10 +13,8 @@ export const Async = () => {
           </div>
         ))}
         <LoadMore
-          as={(props) => <div {...props}>"loading"</div>}
-          onLoadMore={async () => {
-            const data = await getAsyncFakeData()
-            setData((d) => [...d, ...data])
+          onLoadMore={() => {
+            setData((d) => [...d, ...getSyncFakeData(2)])
           }}
         />
       </div>

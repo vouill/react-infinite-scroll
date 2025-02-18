@@ -1,4 +1,4 @@
-import React, { useRef, useEffect } from "react"
+import { useRef, useEffect, useCallback } from "react"
 
 const options = {
   root: null,
@@ -12,6 +12,34 @@ type LoadMoreProps = {
 } & React.HTMLAttributes<HTMLDivElement>
 
 /**
+ * The hook needed to do all this, can be used independently if needed
+ */
+export const useLoadMore = ({
+  onLoadMore,
+}: Pick<LoadMoreProps, "onLoadMore">) => {
+  const ref = useRef(null)
+
+  const callback = useCallback<IntersectionObserverCallback>(
+    (entries) => {
+      if (entries[0].isIntersecting) {
+        onLoadMore()
+      }
+    },
+    [onLoadMore]
+  )
+  useEffect(() => {
+    const observer = new IntersectionObserver(callback, options)
+    if (ref.current) {
+      observer.observe(ref.current)
+    }
+    return () => {
+      observer.disconnect()
+    }
+  }, [ref, callback])
+  return [ref]
+}
+
+/**
  * This component is used to trigger the infinite scroll for pipeline steps
  */
 export const LoadMore = ({
@@ -19,24 +47,6 @@ export const LoadMore = ({
   as: Component = "div",
   ...props
 }: LoadMoreProps) => {
-  const ref = useRef(null)
-
-  const callback: IntersectionObserverCallback = (entries) => {
-    console.log(entries)
-    if (entries[0].isIntersecting) {
-      onLoadMore()
-    }
-  }
-  useEffect(() => {
-    const observer = new IntersectionObserver(callback, options)
-    if (ref.current) {
-      console.log("observing", ref.current)
-      observer.observe(ref.current)
-    }
-    return () => {
-      console.log("disconnecting observer")
-      observer.disconnect()
-    }
-  }, [ref, callback])
+  const [ref] = useLoadMore({ onLoadMore })
   return <Component ref={ref} {...props} />
 }
