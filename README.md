@@ -6,7 +6,16 @@ Uses the [Intersection Observer](https://caniuse.com/intersectionobserver) API a
 
 # Usage
 
-`@vouill/react-infinite-scroll` exposes a `<LoadMore onLoadMore={()=>{}}/>` component.
+```tsx
+import { LoadMore } from "@vouill/react-infinite-scroll"
+
+...
+
+    <YourList/>
+    <LoadMore onLoadMore={loadMoreData}/>
+
+...
+```
 
 When this component is reached while scrolling or rendering, it will fire the `onLoadMore` event.
 
