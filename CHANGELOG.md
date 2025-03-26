@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.0.1](https://github.com/vouill/react-infinite-scroll/compare/v1.0.0...v1.0.1) (2025-03-26)
+
+
+### Bug Fixes
+
+* udpate docs and update typings for loadmore ([fb7ab6c](https://github.com/vouill/react-infinite-scroll/commit/fb7ab6c92322b29f27aee1d18fbd8548ee5baa17))
+* update release please action ([f9110fc](https://github.com/vouill/react-infinite-scroll/commit/f9110fc1452fc437e36678b069a3a92c3217352a))
+
 ## 1.0.0 (2025-02-18)
 
 
