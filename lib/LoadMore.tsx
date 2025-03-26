@@ -6,10 +6,10 @@ const options = {
   threshold: 1,
 }
 
-type LoadMoreProps = {
+type LoadMoreProps<T = React.HTMLAttributes<HTMLDivElement>> = {
   onLoadMore: () => void
   as?: React.ElementType
-} & React.HTMLAttributes<HTMLDivElement>
+} & T
 
 /**
  * The hook needed to do all this, can be used independently if needed
@@ -42,11 +42,11 @@ export const useLoadMore = ({
 /**
  * This component is used to trigger the infinite scroll for pipeline steps
  */
-export const LoadMore = ({
+export const LoadMore = <T,>({
   onLoadMore,
   as: Component = "div",
   ...props
-}: LoadMoreProps) => {
+}: LoadMoreProps<T>) => {
   const [ref] = useLoadMore({ onLoadMore })
   return <Component ref={ref} {...props} />
 }
