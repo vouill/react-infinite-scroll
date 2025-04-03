@@ -8,7 +8,7 @@ export function Sync() {
     <div className="App">
       <div>
         {data.map((content, index) => (
-          <div key={index}>
+          <div className="item" key={index}>
             {content} - {index}
           </div>
         ))}
