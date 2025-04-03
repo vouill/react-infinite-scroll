@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.1.0](https://github.com/vouill/react-infinite-scroll/compare/v1.0.1...v1.1.0) (2025-04-03)
+
+
+### Features
+
+* add e2e test ([89533bb](https://github.com/vouill/react-infinite-scroll/commit/89533bbbfb7acbb182afe0ee6306635380e1bda5))
+* add e2e test ([c4cf5e8](https://github.com/vouill/react-infinite-scroll/commit/c4cf5e8d0980e964b38e6cc70653fec6d6cf8afc))
+
 ## [1.0.1](https://github.com/vouill/react-infinite-scroll/compare/v1.0.0...v1.0.1) (2025-03-26)
 
 
