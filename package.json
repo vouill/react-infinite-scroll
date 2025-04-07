@@ -1,7 +1,11 @@
 {
   "name": "@vouill/react-infinite-scroll",
   "version": "1.1.1",
-  "type": "module",
+  "description": "Dead simple infinite scroll component for React.",
+  "source": "lib/LoadMore.tsx",
+  "main": "index.js",
+  "module": "index.mjs",
+  "types": "index.d.ts",
   "scripts": {
     "dev": "vite --port 3000",
     "test": "npm run dev & vitest",
@@ -13,15 +17,33 @@
     "preview": "vite preview"
   },
   "files": [
+    "lib/LoadMore.tsx",
     "index.js",
     "index.js.map",
-    "index.cjs",
-    "index.cjs.map",
-    "index.d.cts",
+    "index.mjs",
+    "index.mjs.map",
     "index.d.ts",
+    "index.d.mts",
     "package.json",
     "README.md"
   ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vouill/react-infinite-scroll.git"
+  },
+  "keywords": [
+    "react",
+    "infinite",
+    "scroll",
+    "infinite-scroll",
+    "component"
+  ],
+  "homepage": "https://github.com/vouill/react-infinite-scroll#readme",
+  "author": "vouill <9969161+vouill@users.noreply.github.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/vouill/react-infinite-scroll/issues"
+  },
   "peerDependencies": {
     "react": "^17.0.0 || ^18.0.0 || ^19.0.0",
     "react-dom": "^17.0.0 || ^18.0.0 || ^19.0.0"

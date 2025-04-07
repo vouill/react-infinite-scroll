@@ -1,8 +1,16 @@
+<div align="center">
+
+![npm bundle size](https://img.shields.io/bundlephobia/min/%40vouill%2Freact-infinite-scroll)
+![NPM License](https://img.shields.io/npm/l/%40vouill%2Freact-infinite-scroll)
+![NPM Version](https://img.shields.io/npm/v/%40vouill%2Freact-infinite-scroll)
+
+</div>
+
 # @vouill/react-infinite-scroll
 
 A very simple and opinionated way to handle infinite scrolling with react.
 
-Uses the [Intersection Observer](https://caniuse.com/intersectionobserver) API and should be SSR friendly.
+Uses the [Intersection Observer](https://caniuse.com/intersectionobserver) API and is SSR friendly.
 
 [Have a look](./lib/LoadMore.tsx) at the code and feel free to take it directly if needed.
 
@@ -82,7 +90,7 @@ const getUrlOffset = (url: string) => {
 }
 
 export default function App() {
-  const { data, isLoading, fetchNextPage, hasNextPage } = useInfiniteQuery<{
+  const { data, isFetching, fetchNextPage, hasNextPage } = useInfiniteQuery<{
     results: { name: string }[]
     count: number
     next: string
@@ -114,7 +122,8 @@ export default function App() {
             </div>
           ))
         )}
-        {!isLoading && hasNextPage && (
+        {isFetching && "loading..."}
+        {!isFetching && hasNextPage && (
           <LoadMore
             style={{ position: "absolute", bottom: "20%" }}
             onLoadMore={() => {
