@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.2.0](https://github.com/vouill/react-infinite-scroll/compare/v1.1.1...v1.2.0) (2025-04-07)
+
+
+### Features
+
+* update package and add meta info ([e716cff](https://github.com/vouill/react-infinite-scroll/commit/e716cff0befb3c25e3551bb4a9bb5699ab2a87c5))
+* update package and add meta info ([61c9782](https://github.com/vouill/react-infinite-scroll/commit/61c9782a24ba378d39c001fcccddbca0f45ea1fe))
+
 ## [1.1.1](https://github.com/vouill/react-infinite-scroll/compare/v1.1.0...v1.1.1) (2025-04-07)
 
 
