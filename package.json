@@ -5,8 +5,7 @@
   "scripts": {
     "dev": "vite --port 3000",
     "test": "npm run dev & vitest",
-    "build": "tsc -b && vite build",
-    "build:library": "tsup",
+    "build": "tsup",
     "lint:check": "eslint .",
     "lint:fix": "eslint . --fix",
     "prettier:check": "prettier . --check",
