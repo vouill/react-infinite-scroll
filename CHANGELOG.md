@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.1](https://github.com/vouill/react-infinite-scroll/compare/v1.1.0...v1.1.1) (2025-04-07)
+
+
+### Bug Fixes
+
+* update SSR & build command ([8bea9ae](https://github.com/vouill/react-infinite-scroll/commit/8bea9ae6029ffae8ab3b22443340171b79505e74))
+
 ## [1.1.0](https://github.com/vouill/react-infinite-scroll/compare/v1.0.1...v1.1.0) (2025-04-03)
 
 
